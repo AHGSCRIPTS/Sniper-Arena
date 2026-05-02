@@ -9,7 +9,9 @@ local Window = Rayfield:CreateWindow({
     DisableRayfieldPrompts = false,
     DisableBuildWarnings = false,
     ConfigurationSaving = {
-        Enabled = false,
+        Enabled = true,
+        FolderName = "AHG",
+        FileName = "SniperArena",
     },
     Discord = {
         Enabled = false,
@@ -472,6 +474,9 @@ ESPTab:CreateColorPicker({
         getgenv().AHG.ESPColor = val
     end,
 })
+
+-- ===================== LOAD CONFIG =====================
+Rayfield:LoadConfiguration()
 
 Rayfield:Notify({
     Title = "Sniper Arena | Best Cheats",
